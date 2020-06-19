@@ -3,14 +3,10 @@ package com.example.dora
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
-import android.util.Log
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.lwh.jackknife.permission.XPermission
 import com.lwh.jackknife.permission.runtime.Permission
-import dora.bugskiller.CrashConfig
-import dora.bugskiller.LogPolicy
-import dora.bugskiller.StoragePolicy
+import dora.bugskiller.*
 
 class SplashActivity : AppCompatActivity() {
 
@@ -43,8 +39,11 @@ class SplashActivity : AppCompatActivity() {
         //不能在Application中初始化，因为动态申请权限需要Activity
         CrashConfig.Builder(this)
                 //请查看SD卡的/sdcard/android-dora目录和Logcat的debug信息
-            .crashReportPolicy(LogPolicy(StoragePolicy()))
-            .testOnly(false)
+            .crashReportPolicy(LogPolicy(StoragePolicy(DefaultGroup())))
+            .filterChain(CrashReportFilterChain().addLast(DefaultFilter()).filter)
+            .crashInfo(MyCrashInfo(this))
+            .enabled(true)
+            .interceptCrash(false)
             .build()
         Handler().postDelayed(Runnable {
             startActivity(Intent(this, MainActivity::class.java))
