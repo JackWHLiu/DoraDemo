@@ -10,7 +10,7 @@ class MyCrashInfo(context: Context?) :
      * 扩展后重写toString()。
      */
     override fun toString(): String {
-        val tips = "不要慌，BUG来了，小场面而已\n"
+        val tips = "不要慌，BUG来了，小场面而已"
         return "${tips}${super.toString()}"
     }
 }

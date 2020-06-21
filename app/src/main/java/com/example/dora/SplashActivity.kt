@@ -36,12 +36,15 @@ class SplashActivity : AppCompatActivity() {
     }
 
     private fun initCrashSDK() {
+        val crashInfo = MyCrashInfo(this)
+        //这个地址根据你拿到dora的服务端源码后，发布到服务器的实际地址为准
+        val url = "http://doramusic.site:8081/saveCrashInfo"
         //不能在Application中初始化，因为动态申请权限需要Activity
         CrashConfig.Builder(this)
                 //请查看SD卡的/sdcard/android-dora目录和Logcat的debug信息
-            .crashReportPolicy(LogPolicy(StoragePolicy(DefaultGroup())))
+            .crashReportPolicy(LogPolicy(StoragePolicy(DoraWebPolicy(url))))
             .filterChain(CrashReportFilterChain().addLast(DefaultFilter()).filter)
-            .crashInfo(MyCrashInfo(this))
+            .crashInfo(crashInfo)
             .enabled(true)
             .interceptCrash(false)
             .build()

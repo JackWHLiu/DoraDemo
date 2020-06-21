@@ -34,5 +34,5 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
     implementation 'com.github.JackWHLiu.jackknife:jackknife-xpermission:4.7.6'
-    implementation 'com.github.JackWHLiu:dora:1.9'
+    implementation 'com.github.JackWHLiu:dora:2.0.2'
 }
