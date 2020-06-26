@@ -11,6 +11,7 @@ fork和star是对我们最好的认可。
 CrashConfig.Builder(this)
     .crashReportPolicy(StoragePolicy("DoraMusic/log"))
     .build()
+    
 第一章 自定义CrashInfo
 
 你可以扩展CrashInfo来收集更多的信息上报。
@@ -25,13 +26,13 @@ CrashConfig.Builder(this)
 
 第三章 自定义Filter
 
-版本2.0.2开始支持。自定义过滤器发生在上报前，如果过滤器handle()方法返回false，则后面的Policy流程不会执行。过滤器是链式结构，可以一个，也可以多个。过滤器必须全部不拦截，才会走到后面的Policy流程。
+版本2.0.5开始支持。自定义过滤器发生在上报前，如果过滤器handle()方法返回false，则后面的Policy流程不会执行。过滤器是链式结构，可以一个，也可以多个。过滤器必须全部不拦截，才会走到后面的Policy流程。
 
 
 
 第四章 自定义Group
 
-版本2.0.2开始支持。设计分组分发的目的在于，让Policy只做上报操作，逻辑控制交给Group。自定义分组可以很好的分发崩溃信息到不同渠道。例如继承BrandGroup得到VivoGroup和OppoGroup，可以把这两个组的崩溃信息分别分配给使用vivo手机和OPPO手机调试的Android开发组成员。Group分组规则一旦定义好，是可以在多个Policy中使用的，这样就做到了复用。分组可以应用到Policy流程。有了分组后，同一类型Policy重复使用就有意义了。比如vivo手机的崩溃信息可以发给正在使用vivo手机调试的开发者，然后oppo手机的崩溃信息可以发给正在使用oppo手机调试的开发者。
+版本2.0.5开始支持。设计分组分发的目的在于，让Policy只做上报操作，逻辑控制交给Group。自定义分组可以很好的分发崩溃信息到不同渠道。例如继承BrandGroup得到VivoGroup和OppoGroup，可以把这两个组的崩溃信息分别分配给使用vivo手机和OPPO手机调试的Android开发组成员。Group分组规则一旦定义好，是可以在多个Policy中使用的，这样就做到了复用。分组可以应用到Policy流程。有了分组后，同一类型Policy重复使用就有意义了。比如vivo手机的崩溃信息可以发给正在使用vivo手机调试的开发者，然后oppo手机的崩溃信息可以发给正在使用oppo手机调试的开发者。
 
 
 
