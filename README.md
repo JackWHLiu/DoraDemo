@@ -42,7 +42,7 @@ CrashConfig.Builder(this)
 
 
 
-1.2.1 版本
+1.2.2 版本
 
 介绍：Dora最初的样子，最精简的版本
 
