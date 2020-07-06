@@ -1,6 +1,6 @@
 Github地址：https://github.com/JackWHLiu/dora.git
 
-https://gfycat.com/EdibleApprehensiveJay
+![在makrdown上生成gif动画](https://gfycat.com/EdibleApprehensiveJay)
 
 fork和star是对我们最好的认可。 
 
