@@ -1,6 +1,6 @@
 Github地址：https://github.com/JackWHLiu/dora.git
 
-![在makrdown上生成gif动画](https://gfycat.com/EdibleApprehensiveJay)
+ ![img](https://gfycat.com/EdibleApprehensiveJay)
 
 fork和star是对我们最好的认可。 
 
@@ -8,7 +8,7 @@ fork和star是对我们最好的认可。 
 
 在启动页SplashActivity中配置，因为Application中无法申请Android6.0以上的运行时权限。
 
-CrashConfig.Builder(this)
+DoraConfig.Builder(this)
     .crashReportPolicy(StoragePolicy("DoraMusic/log"))
     .build()
 第一章 自定义CrashInfo
