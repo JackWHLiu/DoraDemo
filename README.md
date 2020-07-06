@@ -11,6 +11,7 @@ fork和star是对我们最好的认可。 
 DoraConfig.Builder(this)
     .crashReportPolicy(StoragePolicy("DoraMusic/log"))
     .build()
+    
 第一章 自定义CrashInfo
 
 你可以扩展CrashInfo来收集更多的信息上报。
