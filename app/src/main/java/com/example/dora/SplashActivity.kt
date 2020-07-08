@@ -50,10 +50,10 @@ class SplashActivity : AppCompatActivity() {
                 //请查看SD卡的/sdcard/android-dora目录和Logcat的debug信息
             .crashReportPolicy(LogcatPolicy(StoragePolicy(DoraWebPolicy(url))))
             .filterChain(CrashReportFilterChain().addLast(DefaultFilter()).filter)
-            .crashInfo(crashInfo)
-            .enabled(true)
-            .interceptCrash(false)
-            .initLogNotification(true)
+            .crashInfo(crashInfo)   //可以自定义崩溃详细信息
+            .enabled(true)  //全局启用/禁用Dora
+            .interceptCrash(false)  //是否防止app闪退
+            .initLogNotification(true)  //默认false，如果使用了LogNotificationPolicy，这个属性必须为true
             .build()
         Handler().postDelayed(Runnable {
             startActivity(Intent(this, MainActivity::class.java))

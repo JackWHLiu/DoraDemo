@@ -1,6 +1,6 @@
 Github地址：https://github.com/JackWHLiu/dora.git
 
- ![img](http://doramusic.site/dora.gif)
+ ![img](http://doramusic.site/images/20200708_113805.mp4)
 
 fork和star是对我们最好的认可。 
 

@@ -6,7 +6,6 @@ import dora.bugskiller.DoraLog
 import dora.bugskiller.LogConsolePolicy
 import dora.bugskiller.LogNotificationPolicy
 
-
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
