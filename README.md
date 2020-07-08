@@ -70,14 +70,11 @@ DoraConfig.Builder(this)
 
 所有类：ActivityThreadFilter、AndroidVersionGroup、BrandGroup、Collector、ComplexGroup、CrashCollector、CrashConfig、CrashInfo、CrashReportFilter、CrashReportFilterChain、CrashReportGroup、CrashReportPolicy、CrashReportPolicyWrapper、DefaultFilter、DefaultGroup、DoraUncaughtExceptionHandler、DoraWebPolicy、LogPolicy、StoragePolicy、TimeFilter、WebPolicy、WebPolicyBase
 
- 
 
-2.1.1 版本
+2.2.9 版本
 
 介绍：一个强大的BUG调试框架，不仅支持被动接收崩溃信息，还支持主动写入日志到文件
 
 功能：按类型分为两大类，crash和log。按要素分为三类，策略、过滤器和分组。两个维度组合起来支持以下5种，
 
 crash+policy、crash+filter、crash+group、log+policy和log+group。
-
-所有类：ActivityThreadFilter、AndroidVersionGroup、BrandGroup、Collector、ComplexGroup、CrashCollector、CrashConfig、CrashInfo、CrashReportFilter、CrashReportFilterChain、CrashReportPolicy、CrashReportPolicyWrapper、DefaultFilter、DefaultGroup、DoraLog、DoraUncaughtExceptionHandler、DoraWebPolicy、Group、Info、LogCollector、LogFilePolicy、LogInfo、LogPolicy、LogReportPolicy、LogReportPolicyWrapper、Policy、PolicyWrapper、StoragePolicy、TimeFilter、WebPolicy、WebPolicyBase
